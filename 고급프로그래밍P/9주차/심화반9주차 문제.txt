@@ -1,0 +1,92 @@
+1. name에 파일 이름과 형식, n에 숫자를 입력받고, 1부터 n까지의 숫자를 name 파일에 출력하시오.
+
+[ 입력예시 ]
+test.txt
+5
+
+[ 파일 내용 ]
+1
+2
+3
+4
+5
+
+2. 위에서 저장한 파일을 읽어, 모든 숫자의 합을 출력하시오.
+
+[ 입력예시 ]
+test.txt
+
+[ 출력예시 ]
+Total = 15
+
+3. 변수 n에 숫자를 입력 받고, 위에서 저장한 파일에 추가로 숫자 n을 출력하시오.
+
+[ 입력예시 ]
+test.txt
+20
+
+[ 파일 내용 ]
+1
+2
+3
+4
+5
+20
+
+4. 사용자로부터 메뉴 개수를 입력 받습니다. 메뉴 개수만큼 반복하여 메뉴 이름과 가격을 입력 받아 “menu.txt” 파일에 저장합니다. “menu.txt” 파일의 내용을 읽어와 출력하는 프로그램을 작성하시오. (단, 메뉴의 각 줄마다 줄바꿈 문자(‘\n’)를 삽입하여 파일에 저장한다.)
+
+[미리정의해야함]
+fw = open("menu.txt", "w")
+print("<메뉴 입력>")
+num = int(input("# of menus = "))
+
+[menu.txt 내용]
+Chocolate Latte 5200
+Strawberry Smoothie 5800
+Mango Yogurt 4800
+Orange Juice 3800
+
+[입출력 예시]
+<메뉴 입력>
+# of menus = 4
+메뉴 이름 : Chocolate Latte
+메뉴 가격 : 5200
+메뉴 이름 : Strawberry Smoothie
+메뉴 가격 : 5800
+메뉴 이름 : Mango Yogurt
+메뉴 가격 : 4800
+메뉴 이름 : Orange Juice
+메뉴 가격 : 3800
+
+<메뉴판>
+Chocolate Latte 5200
+Strawberry Smoothie 5800
+Mango Yogurt 4800
+Orange Juice 3800
+
+
+(선택) 5. 사용자로부터 문자열을 입력받아 python.txt 파일에 저장하고, 
+양의 정수 n을 입력받아 python.txt 파일의 시작 위치로부터 n 바이트 떨어진
+위치의 문자는 어떤 문자인지 출력하는 프로그램을 작성하시오.
+[ 기본선언 ]
+m = input("문자열 입력 : ")
+fw = open("python.txt", "w")
+
+[ 입력 예시 ]
+문자열 입력 : Python is an interpreted high-level programming language.
+n 입력 : 23
+
+[ 출력 예시 ]
+23 bytes 떨어진 위치에 있는 문자 : d
+
+======힌트======
+줄바꿈 문자열 : \n
+
+파일 입출력
+fp = open("파일경로 및 파일명", "w") #파일 열기 => w는 쓰기, r은 읽기, a는 추가모드
+fp.write("내용") #연 파일에 내용 쓰기
+line = fp.readline() #연 파일에서 한 줄 읽어오기
+s = fp.read() <--파일 내용 전체를 문자열로 반환
+fp.seek(n) <--파일의 n번째 bite로 이동
+s = fp.read(n) <--파일에서 n개의 bite만큼 반환
+fp.close #열었던 파일 닫기
