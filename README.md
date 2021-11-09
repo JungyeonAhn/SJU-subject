@@ -1,7 +1,7 @@
 # SJU-subject
 세종대학교에서 수강했던 전공 과목들 🌱
 
-전공 GPA : 3.8 / 4.5
+전공 GPA : 3.79 / 4.5
 
 
 |Year|Semester|Subject(KOR)|Subject(ENG)|Grade|
